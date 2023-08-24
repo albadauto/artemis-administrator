@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use \App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SystemController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +34,13 @@ Route::prefix('UsersControl')->middleware('auth')->group(function (){
     Route::get('/deleteuser/{id}', [UserController::class, 'DeleteUser'])->name('user.Deleteuser');
     Route::get('/updateuser/{id}', [UserController::class, 'UpdateUser'])->name('user.Updateuser');
     Route::put('/updateoneuser/{id}', [UserController::class, 'UpdateOneUser'])->name('user.Updateoneuser');
+});
+
+Route::prefix('System')->middleware('auth')->group(function () {
+    Route::get('/', [SystemController::class, 'Index'])->name('system.Index');
+    Route::post('/insertsystem', [SystemController::class, 'InsertSystem'])->name('system.Insertsystem');
+    Route::get('/systemactions', [SystemController::class, 'Systems'])->name('system.Systems');
+    Route::get('/deletesystem/{id}', [SystemController::class, 'DeleteSystem'])->name('system.Deletesystem');
+    Route::get('/updatesystem/{id}', [SystemController::class, 'UpdateSystem'])->name('system.Updatesystem');
+    Route::put('/updateonesystem/{id}', [SystemController::class, 'UpdateOneSystem'])->name('system.Updateonesystem');
 });
