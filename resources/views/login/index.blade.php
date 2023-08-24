@@ -29,10 +29,7 @@
             margin-bottom: 20px;
         }
 
-        .login-btn {
-            background-color: #007bff;
-            border: none;
-        }
+
 
         .login-btn:hover {
             background-color: #0056b3;
@@ -58,7 +55,7 @@
             <label for="password" class="form-label">Senha</label>
             <input type="password" class="form-control" id="password" placeholder="Sua senha" name="password">
         </div>
-        <button type="submit" class="btn btn-primary login-btn w-100">Entrar</button>
+        <button type="submit" class="btn btn-dark w-100">Entrar</button>
     </form>
     @if($error = Session::get('error'))
         {{ $error }}

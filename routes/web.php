@@ -29,4 +29,8 @@ Route::prefix('/home')->middleware('auth')->group(function () {
 Route::prefix('UsersControl')->middleware('auth')->group(function (){
     Route::get('/', [UserController::class, 'Index'])->name('user.Index');
     Route::post('/insertnewuser', [UserController::class, 'InsertNewUser'])->name('user.Insert');
+    Route::get('/actions', [UserController::class, 'Actions'])->name('user.Actions');
+    Route::get('/deleteuser/{id}', [UserController::class, 'DeleteUser'])->name('user.Deleteuser');
+    Route::get('/updateuser/{id}', [UserController::class, 'UpdateUser'])->name('user.Updateuser');
+    Route::put('/updateoneuser/{id}', [UserController::class, 'UpdateOneUser'])->name('user.Updateoneuser');
 });
