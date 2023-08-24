@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use \App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SystemController;
+use App\Http\Controllers\PaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,4 +44,9 @@ Route::prefix('System')->middleware('auth')->group(function () {
     Route::get('/deletesystem/{id}', [SystemController::class, 'DeleteSystem'])->name('system.Deletesystem');
     Route::get('/updatesystem/{id}', [SystemController::class, 'UpdateSystem'])->name('system.Updatesystem');
     Route::put('/updateonesystem/{id}', [SystemController::class, 'UpdateOneSystem'])->name('system.Updateonesystem');
+});
+
+Route::prefix('Payment')->middleware('auth')->group(function () {
+    Route::get('/', [PaymentController::class, 'Index'])->name('payment.Index');
+    Route::post('/insertpayment', [PaymentController::class, 'InsertPayment'])->name('payment.Insertpayment');
 });
