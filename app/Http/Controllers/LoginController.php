@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -19,17 +20,17 @@ class LoginController extends Controller
         ];
         if(Auth::attempt($credentials)){
             session()->regenerate();
-            return redirect()->route('home.index');
+            return redirect()->route('home.Index');
         }else{
-            return redirect()->back()->with('error', 'Login ou senha incorreto(s)');
+            return redirect()->back()->with('error', 'Email ou senha inexistente(s)');
         }
     }
-
     public function ForAdmin(){
         $user = new User();
-        $user->email = 'jobarbosa@jrosoftwares.com.br';
+        $user->email = 'jobarbosa@jrsoftwares.com.br';
         $user->password = Hash::make('root');
         $user->name = 'José Adauto';
+
         $user->save();
         return redirect()->back();
     }

@@ -30,7 +30,7 @@
                         Sistemas
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Incluir</a></li>
+                        <li><a class="dropdown-item" href="">Incluir</a></li>
                         <li><a class="dropdown-item" href="#">Excluir</a></li>
                         <li><a class="dropdown-item" href="#">Consultar</a></li>
                         <li><a class="dropdown-item" href="#">Atualizar</a></li>
@@ -52,7 +52,7 @@
                         Usuários
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Incluir</a></li>
+                        <li><a class="dropdown-item" href="{{ route('user.Index') }}">Incluir</a></li>
                         <li><a class="dropdown-item" href="#">Excluir</a></li>
                         <li><a class="dropdown-item" href="#">Consultar</a></li>
                         <li><a class="dropdown-item" href="#">Atualizar</a></li>

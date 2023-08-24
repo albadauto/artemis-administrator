@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Str;
-
 return [
 
     /*
@@ -60,6 +59,28 @@ return [
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+
+            ]) : [],
+        ],
+
+        'mysql_artemis' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST_ARTEMIS', '127.0.0.1'),
+            'port' => env('DB_PORT_ARTEMIS', '3306'),
+            'database' => env('DB_DATABASE_ARTEMIS', 'forge'),
+            'username' => env('DB_USERNAME_ARTEMIS', 'forge'),
+            'password' => env('DB_PASSWORD_ARTEMIS', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+
             ]) : [],
         ],
 

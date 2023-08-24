@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use \App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +24,9 @@ Route::prefix('/')->group(function () {
 
 Route::prefix('/home')->middleware('auth')->group(function () {
     Route::get('/', [HomeController::class, 'Index'])->name('home.Index');
+});
+
+Route::prefix('UsersControl')->middleware('auth')->group(function (){
+    Route::get('/', [UserController::class, 'Index'])->name('user.Index');
+    Route::post('/insertnewuser', [UserController::class, 'InsertNewUser'])->name('user.Insert');
 });
