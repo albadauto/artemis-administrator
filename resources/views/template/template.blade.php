@@ -41,7 +41,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('payment.Index') }}">Incluir</a></li>
-                        <li><a class="dropdown-item" href="#">Excluir/Consultar/Atualizar</a></li>
+                        <li><a class="dropdown-item" href="{{ route('payment.Actions') }}">Excluir/Consultar/Atualizar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

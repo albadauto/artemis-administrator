@@ -49,4 +49,5 @@ Route::prefix('System')->middleware('auth')->group(function () {
 Route::prefix('Payment')->middleware('auth')->group(function () {
     Route::get('/', [PaymentController::class, 'Index'])->name('payment.Index');
     Route::post('/insertpayment', [PaymentController::class, 'InsertPayment'])->name('payment.Insertpayment');
+    Route::get('/paymentsactions', [PaymentController::class, 'Payments'])->name('payment.Actions');
 });
