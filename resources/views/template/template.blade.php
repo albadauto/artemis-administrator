@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Administração - Artemis</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
@@ -51,6 +51,15 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('user.Index') }}">Incluir</a></li>
                         <li><a class="dropdown-item" href="{{ route('user.Actions') }}">Excluir/Consultar/Atualizar</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Chamados
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('support.Index') }}">Verificar ou Responder Chamados</a></li>
 
                     </ul>
                 </li>

@@ -30,10 +30,22 @@
 
         <div class="row bg-light">
             <div class="col">
-                <div class="form-floating mb-5">
+                <div class="form-floating mb-3">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="description"></textarea>
                     <label for="floatingTextarea2">Descrição</label>
                 </div>
+            </div>
+        </div>
+
+        <div class="row bg-light">
+            <div class="col mb-3">
+                <select class="form-select" aria-label="Default select example" name="user_id">
+                    <option selected>Selecione o usuário</option>
+                    @foreach($users as $user)
+                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                    @endforeach
+
+                </select>
             </div>
         </div>
 
@@ -42,5 +54,7 @@
                 <button type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </div>
+
+
     </form>
 @endsection
