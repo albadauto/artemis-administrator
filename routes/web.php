@@ -63,4 +63,9 @@ Route::prefix('Support')->middleware('auth')->group(function () {
 Route::prefix('UserAdmin')->middleware('auth')->group(function () {
     Route::get('/', [UserAdminController::class, 'Index'])->name('UserAdmin.Index');
     Route::post('/insertuseradmin', [UserAdminController::class, 'InsertUserAdmin'])->name('UserAdmin.Insertuseradmin');
+    Route::get('/usersadminsactions', [UserAdminController::class, 'UsersAdmin'])->name('UserAdmin.Usersadmin');
+    Route::get('/updateuseradmin/{id}', [UserAdminController::class, 'UpdateUserAdmin'])->name('UserAdmin.Updateuseradmin');
+    Route::put('/updateoneuseradmin/{id}', [UserAdminController::class, 'UpdateOneUserAdmin'])->name('UserAdmin.Updateoneuseradmin');
+    Route::get('/deleteuseradmin/{id}', [UserAdminController::class, 'DeleteUserAdmin'])->name('UserAdmin.Deleteuseradmin');
+
 });

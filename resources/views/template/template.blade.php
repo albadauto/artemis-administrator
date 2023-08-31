@@ -64,12 +64,12 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{ route('UserAdmin.Index') }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <b>Usuários Admin</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('UserAdmin.Index') }}">Incluir</a></li>
-                        <li><a class="dropdown-item" href="#">Excluir/Consultar/Atualizar</a></li>
+                        <li><a class="dropdown-item" href="{{ route('UserAdmin.Usersadmin') }}">Excluir/Consultar/Atualizar</a></li>
 
                     </ul>
                 </li>
