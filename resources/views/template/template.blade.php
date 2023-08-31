@@ -17,7 +17,7 @@
     }
 </style>
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light shadow">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home.Index') }}"><img src="{{ asset('image/logo.png') }}" width="150px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sistemas
+                        <b>Sistemas</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('system.Index') }}">Incluir</a></li>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Faturas
+                        <b>Faturas</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('payment.Index') }}">Incluir</a></li>
@@ -46,7 +46,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuários
+                       <b>Usuários</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('user.Index') }}">Incluir</a></li>
@@ -56,7 +56,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Chamados
+                        <b>Chamados</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('support.Index') }}">Verificar ou Responder Chamados</a></li>
@@ -65,17 +65,17 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuários Admin
+                        <b>Usuários Admin</b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Incluir</a></li>
+                        <li><a class="dropdown-item" href="{{ route('UserAdmin.Index') }}">Incluir</a></li>
                         <li><a class="dropdown-item" href="#">Excluir/Consultar/Atualizar</a></li>
 
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Perfil
+                       <b>Perfil</b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('login.logout') }}">Sair</a></li>

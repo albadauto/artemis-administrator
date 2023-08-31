@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SystemController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\SupportController;
+use App\Http\Controllers\UserAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,8 +55,12 @@ Route::prefix('Payment')->middleware('auth')->group(function () {
     Route::get('/deletepayment/{id}', [PaymentController::class, 'DeletePayment'])->name('payment.Deletepayment');
 });
 
-Route::prefix('Support')->middleware('auth')->group(function (){
+Route::prefix('Support')->middleware('auth')->group(function () {
     Route::get('/', [SupportController::class, 'Index'])->name('support.Index');
     Route::post('/publicanswer', [SupportController::class, 'PublicAnswer'])->name('support.Publicanswer');
+});
 
+Route::prefix('UserAdmin')->middleware('auth')->group(function () {
+    Route::get('/', [UserAdminController::class, 'Index'])->name('UserAdmin.Index');
+    Route::post('/insertuseradmin', [UserAdminController::class, 'InsertUserAdmin'])->name('UserAdmin.Insertuseradmin');
 });

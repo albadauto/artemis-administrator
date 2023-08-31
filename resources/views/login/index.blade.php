@@ -6,7 +6,10 @@
     <title>Página de Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
         body {
+
             background-color: #f8f9fa;
             display: flex;
             align-items: center;
@@ -29,8 +32,6 @@
             margin-bottom: 20px;
         }
 
-
-
         .login-btn:hover {
             background-color: #0056b3;
         }
@@ -48,7 +49,7 @@
     <form method="post" action="{{ route('login.auth') }}">
         @csrf
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label font-weight-bold">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Seu email" name="email">
         </div>
         <div class="mb-3">
